@@ -1,0 +1,7 @@
+flowchart LR
+  A["1. Brouillon<br/>équipement, code, résumé, rien d'écrit"] --> B["2. Contrôle droits<br/>l'utilisateur peut demander ce ticket ?"]
+  B --> C["3. Approbation C2<br/>le responsable voit le brouillon et clique approuver"]
+  C --> D["4. Clé d'idempotence<br/>hash équipement, code, date, demandeur"]
+  D --> E["5. Appel MCP<br/>create_ticket avec la clé"]
+  E --> F["6. Résultat<br/>TK-xxxx ou déjà créé ; journal d'audit"]
+  C -.->|refus ou absence de réponse| X["Aucun appel MCP"]

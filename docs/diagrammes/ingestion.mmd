@@ -1,0 +1,8 @@
+flowchart LR
+  A["1. Fichier<br/>PDF texte, PDF scanné, image"] --> B["2. Détection<br/>texte natif ou scan ?"]
+  B --> C["3. OCR<br/>si scan : texte + position + confiance"]
+  C --> D["4. Extraction PyMuPDF<br/>texte, tableaux, figures rastérisées"]
+  D --> E["5. Découpage<br/>chunks par page et par élément"]
+  E --> F["6. Légende VLM<br/>figures et photos, étiquetées généré"]
+  F --> G["7. Embeddings<br/>chunks et légendes"]
+  G --> H["8. Index<br/>vecteurs + métadonnées issues de inventaire.csv"]

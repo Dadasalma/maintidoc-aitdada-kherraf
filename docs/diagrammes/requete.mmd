@@ -1,0 +1,8 @@
+flowchart LR
+  A["1. Authentification<br/>API : identité > groupe(s)"] --> B["2. Photo<br/>VLM : description, équipement probable"]
+  B --> C["3. Recherche<br/>filtre groupes C1 + versions actives"]
+  C --> D["4. Historique<br/>MCP get_history si nécessaire, C1"]
+  D --> E["5. Rédaction<br/>réponse avec sources doc + page"]
+  E --> F["6. Citations C3<br/>chaque citation existe et soutient ?"]
+  F --> G["7. Réponse<br/>sourcée, ou demande de précision / refus"]
+  G --> H["8. Brouillon ticket<br/>proposé seulement"]

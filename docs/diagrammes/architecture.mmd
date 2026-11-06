@@ -1,0 +1,19 @@
+flowchart TD
+  UI["Interface<br/>question + photo, réponse sourcée, bouton approuver"]
+  API["API<br/>authentification, groupe d'accès, journal d'audit"]
+  ORCH["Orchestration (agent)<br/>photo > recherche > historique > rédaction > citations > brouillon ticket"]
+  RECH["Recherche documentaire<br/>index multimodal, filtre groupes, statut de version"]
+  VLM["Modèle vision-langage<br/>décrit la photo, rédige la réponse"]
+  MCP["Outil MCP<br/>get_history, create_ticket, clé d'idempotence"]
+  STO[("Stockage<br/>fichiers, index vectoriel, métadonnées, tickets fictifs, journal")]
+  ING["Ingestion hors ligne<br/>OCR, découpage, légendes, embeddings"]
+  UI -->|question + photo| API
+  API -->|réponse sourcée| UI
+  API -->|requête + groupe| ORCH
+  ORCH -->|réponse + citations, C3| API
+  ORCH -->|requête + filtre groupe, C1| RECH
+  ORCH <-->|photo / prompt| VLM
+  ORCH -->|get_history / create_ticket, C2| MCP
+  RECH <--> STO
+  MCP -->|tickets| STO
+  ING -->|index| STO
