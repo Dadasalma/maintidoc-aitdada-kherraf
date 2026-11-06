@@ -14,6 +14,6 @@ Le corpus est synthétique et pédagogique, sans validation constructeur ni HSE.
 | 7 | Une image fixe ne distingue pas voyant fixe, clignotant lent et rapide | photos de panneaux | Garder comme ambiguïté volontaire | à décider | |
 | 8 | Statuts de version (active, obsolete_test) | proc_*_v1 / v2 | Ajouter statut_version et remplace_document_id à l'index | à décider | |
 | 9 | OCR insuffisant sur les scans pâles (test Tesseract) | proc_tension_courroie_v1, proc_graissage_moto_v1, releve_temp_moto_b01 | Comparer les moteurs et prétraiter (semaine 2) | à décider | |
-| 10 | Vérification des licences des 5 photos externes | photo_ext_* | Renseigner verifie_par après contrôle de chaque page de licence | à décider | |
+| 10 | Vérification des licences des 5 photos externes | photo_ext_* | Renseigner verifie_par après contrôle de chaque page de licence | fait | Licences contrôlées le 2026-11-06 : photos 1-3 par Salma, photos 4-5 par Ayoub |
 | 11 | Confirmation de la relecture humaine des 45 documents synthétiques | colonne verifie_par | Chaque relecteur confirme avoir relu | à décider | |
 | 12 | Relecture page par page des extensions de manuels (P15) | six manuels | Relecture à confirmer | à décider | |
