@@ -8,7 +8,7 @@
 MaintiDoc est un assistant documentaire multimodal et agentique pour la maintenance (module IA générative multimodale, EMSI 2026). Ce livrable fige le cadrage, le corpus et l'architecture cible.
 
 ## Contenu du ZIP
-- `L1_MaintiDoc_AITDADA-KHERRAF_Rapport.pdf` : rapport (parties 2.1 à 2.6)
+- `L1_MaintiDoc_AITDADA-KHERRAF_Rapport.pdf` : rapport (sections 1 à 6)
 - `L1_MaintiDoc_AITDADA-KHERRAF_LienGitHub.txt` : URL du dépôt
 - `README.md` : cette page
 - `L1_MaintiDoc_AITDADA-KHERRAF_Corpus/` : `inventaire.csv`, `prompts_corpus.md`, `documents/famille_1` (convoyeurs), `documents/famille_2` (motorisation), `images/`
